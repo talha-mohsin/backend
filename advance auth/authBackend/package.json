@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "start": "node api/app.js",
+    "dev": "nodemon api/app.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.3.1",
     "nodemailer": "^8.0.2",
+    "serverless-http": "^4.0.0",
     "yup": "^1.7.1"
   }
 }

@@ -4,6 +4,7 @@ import userRoute from "./routes/userRoute.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import dns from "node:dns";
+import serverless from "serverless-http";
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 const app = express();
@@ -22,7 +23,9 @@ app.use("/user", userRoute);
 
 // http:localhost:8000/user/register
 
-app.listen(PORT, () => {
-  connectDB();
-  console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   connectDB();
+//   console.log(`Server is running on port ${PORT}`);
+// });
+
+export default serverless(app);
