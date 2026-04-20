@@ -21,4 +21,19 @@ router.post("/forgot-password", forgotPassword);
 router.post("/verify-otp/:email", verifyOTP);
 router.post("/change-password/:email", changePassword);
 
+// for vercel
+router.get("/getRoughData", (req, res) => {
+  try {
+    res.json({
+      status: true,
+      message: "Your Api is working well",
+    });
+  } catch (error) {
+    res.json({
+      status: true,
+      message: error.message || "Something went wrong",
+    });
+  }
+});
+
 export default router;
