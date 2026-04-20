@@ -1,6 +1,6 @@
 import express, { urlencoded } from "express";
-import connectDB from "./database/db.js";
-import userRoute from "./routes/userRoute.js";
+import connectDB from "./api/database/db.js";
+import userRoute from "./api/routes/userRoute.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import dns from "node:dns";
